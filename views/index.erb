@@ -1,0 +1,14 @@
+<%# recipes passed in the app %>
+
+
+<ul>
+  <% @recipes.each_with_index do |recipe, index| %>
+    <li>
+      <%= "#{index + 1}. [#{recipe.done ? 'X' : ' '}] #{recipe.name}" %>
+      <%= "Rating: #{recipe.rating} stars - Preparation time: #{recipe.prep_time}" %>
+      <a href="/recipes/mark_done/<%= index %>">Mark as done</a>
+      <a href="/recipes/<%= index %>">Delete</a>
+    </li>
+  <% end %>
+</ul>
+<a href='./new'>Add recipe</a>

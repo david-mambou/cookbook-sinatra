@@ -1,0 +1,9 @@
+<%# <ul>
+  <% @results.each_with_index do |recipe, index| %>
+    <li>
+      <%= "#{index + 1}. #{recipe.name}" %>
+      <%= "Rating: #{recipe.rating} stars - Preparation time: #{recipe.prep_time}" %>
+      <a href="/recipes/add/<%= index %>">Add this recipe</a>
+    </li>
+  <% end %>
+</ul> %>
